@@ -1,0 +1,30 @@
+@use "src/colors" as colors;
+@use "src/typographies" as typographies;
+@use "src/mode" as mode;
+
+.outer {
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 32px 24px;
+  background: colors.$Gray;
+
+  @include mode.light {
+    background: colors.$Gray87;
+  }
+}
+
+.title {
+  @include typographies.HeadingXXS;
+
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+
+  border-bottom: solid 1px colors.$White;
+  @include mode.light {
+    border-bottom: solid 1px colors.$Gray;
+  }
+}
+
+.content {
+  @include typographies.BodyS;
+}

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Inter-ExtraLightItalic";
+  src: url("Inter-ExtraLightItalic.eot");
+  src:
+    url("Inter-ExtraLightItalic.eot?#iefix") format("embedded-opentype"),
+    url("Inter-ExtraLightItalic.woff2") format("woff2"),
+    url("Inter-ExtraLightItalic.woff") format("woff"),
+    url("Inter-ExtraLightItalic.ttf") format("ttf"),
+    url("Inter-ExtraLightItalic.svg#Inter-ExtraLightItalic") format("svg");
+  font-style: italic;
+  font-weight: extra-light;
+}

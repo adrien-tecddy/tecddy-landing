@@ -1,0 +1,96 @@
+@use "sass:color" as color;
+@use "src/colors" as colors;
+@use "src/typographies" as typographies;
+
+.Article {
+  max-width: 786px;
+  margin: 0 auto;
+}
+
+.Article h1 {
+  @include typographies.BodyBoldXXL;
+  margin-bottom: 0.75em;
+}
+
+.Article h2 {
+  @include typographies.BodyBoldXL;
+  margin-top: 1.25em;
+  margin-bottom: 0.75em;
+}
+
+.Article h3 {
+  @include typographies.BodyBoldL;
+  margin-top: 1.25em;
+  margin-bottom: 0.75em;
+}
+
+.Article h4 {
+  @include typographies.BodyBoldM;
+  margin-top: 1.25em;
+  margin-bottom: 0.75em;
+}
+
+.Article ol {
+  list-style: decimal;
+  margin: 1em;
+}
+
+.Article ul {
+  list-style: disc;
+  margin: 1em;
+}
+
+.Article p {
+  margin-bottom: 0.75rem;
+}
+
+.Article p.Lead {
+  margin-bottom: 3rem;
+  color: color.adjust(colors.$Gray, $lightness: 60%);
+}
+
+.Buttons {
+  max-width: 786px;
+  margin: 88px auto 0 auto;
+}
+
+.Buttons_title {
+  @include typographies.BodyBoldM;
+  margin-bottom: 1.25em;
+  text-align: center;
+}
+
+.Buttons_children {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+
+  @media (max-width: 796px) {
+    flex-direction: column;
+  }
+}
+
+.References {
+  max-width: 786px;
+  margin: 188px auto 0 auto;
+}
+
+.References_title {
+  @include typographies.BodyBoldM;
+  margin-bottom: 0.75em;
+}
+
+.References_list {
+  list-style: disc;
+  margin: 1em;
+}
+
+.References_list a {
+  color: color.adjust(colors.$Gray, $lightness: 60%);
+
+  &:hover {
+    color: colors.$White;
+  }
+}

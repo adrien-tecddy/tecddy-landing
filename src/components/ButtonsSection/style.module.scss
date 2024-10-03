@@ -1,0 +1,15 @@
+@use "src/colors" as colors;
+@use "src/typographies" as typographies;
+
+.outer {
+  width: auto;
+
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: 88px;
+  padding-top: 88px;
+
+  align-items: center;
+  justify-content: center;
+}

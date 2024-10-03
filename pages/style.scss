@@ -1,0 +1,49 @@
+@use "src/colors" as colors;
+@use "src/typographies" as typographies;
+@use "src/mode" as mode;
+
+body {
+  @include typographies.BodyM;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: colors.$Black;
+  color: colors.$White;
+
+  @include mode.light {
+    background-color: colors.$White;
+    color: colors.$Black;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: colors.$White;
+
+  @include mode.light {
+    color: colors.$Black;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include typographies.BodyM;
+  padding: 0;
+  margin: 0;
+}

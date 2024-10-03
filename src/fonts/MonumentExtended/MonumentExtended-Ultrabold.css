@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "MonumentExtended-Ultrabold";
+  src: url("MonumentExtended-Ultrabold.eot");
+  src:
+    url("MonumentExtended-Ultrabold.eot?#iefix") format("embedded-opentype"),
+    url("MonumentExtended-Ultrabold.woff2") format("woff2"),
+    url("MonumentExtended-Ultrabold.woff") format("woff"),
+    url("MonumentExtended-Ultrabold.ttf") format("ttf"),
+    url("MonumentExtended-Ultrabold.svg#MonumentExtended-Ultrabold")
+      format("svg");
+  font-style: normal;
+  font-weight: ultrabold;
+}

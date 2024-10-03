@@ -1,0 +1,193 @@
+@import "src/fonts/MonumentExtended/MonumentExtended-Regular.css";
+@import "src/fonts/MonumentExtended/MonumentExtended-Ultrabold.css";
+@import "src/fonts/Inter/Inter-Medium.css";
+@import "src/fonts/Inter/Inter-Bold.css";
+
+@mixin MonumentExtendedRegular {
+  font-family: "MonumentExtended-Regular", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+}
+
+@mixin MonumentExtendedUltrabold {
+  font-family: "MonumentExtended-Ultrabold", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 800;
+}
+
+@mixin InterMedium {
+  font-family: "Inter-Medium", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+}
+
+@mixin InterBold {
+  font-family: "Inter-Bold", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 700;
+}
+
+@mixin HeadingXXL {
+  @include MonumentExtendedRegular;
+  font-size: 56px;
+  line-height: 120%;
+  letter-spacing: 3.36px;
+}
+
+@mixin HeadingXL {
+  @include MonumentExtendedRegular;
+  font-size: 48px;
+  line-height: 120%; /* 57.6px */
+  letter-spacing: 2.88px;
+}
+
+@mixin HeadingL {
+  @include MonumentExtendedRegular;
+  font-size: 40px;
+  line-height: 120%; /* 57.6px */
+  letter-spacing: 2.88px;
+}
+
+@mixin HeadingM {
+  @include MonumentExtendedRegular;
+  font-size: 32px;
+  line-height: 130%; /* 41.6px */
+}
+
+@mixin HeadingS {
+  @include MonumentExtendedRegular;
+  font-size: 24px;
+  line-height: 140%; /* 41.6px */
+}
+
+@mixin HeadingXS {
+  @include MonumentExtendedRegular;
+  font-size: 20px;
+  line-height: 140%;
+}
+
+@mixin HeadingXXS {
+  @include MonumentExtendedRegular;
+  font-size: 16x;
+  line-height: 140%;
+}
+
+@mixin BodyXL {
+  font-size: 22px;
+  line-height: 160%;
+}
+
+@mixin BodyL {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+@mixin BodyM {
+  @include InterMedium;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+@mixin BodyS {
+  font-size: 14px;
+  line-height: 150%;
+}
+
+@mixin BodyXS {
+  font-size: 12px;
+  line-height: 150%;
+}
+
+@mixin BodyBoldXXL {
+  @include InterBold;
+  font-size: 26px;
+  line-height: 160%;
+}
+
+@mixin BodyBoldXL {
+  @include InterBold;
+  font-size: 22px;
+  line-height: 160%;
+}
+
+@mixin BodyBoldL {
+  @include InterBold;
+  line-height: 150%;
+}
+
+@mixin BodyBoldM {
+  @include InterBold;
+  line-height: 150%;
+}
+
+@mixin BodyBoldS {
+  @include InterBold;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+@mixin BodyBoldXS {
+  @include InterBold;
+  font-size: 12px;
+  line-height: 150%;
+}
+
+@mixin ButtonXL {
+  @include MonumentExtendedRegular;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin ButtonL {
+  @include MonumentExtendedRegular;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@mixin ButtonM {
+  @include MonumentExtendedRegular;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin ButtonS {
+  @include MonumentExtendedRegular;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@mixin ResponsiveHeadingL {
+  @include HeadingL;
+
+  @media (max-width: 1024px) {
+    @include HeadingM;
+  }
+
+  @media (max-width: 796px) {
+    @include HeadingS;
+  }
+}
+
+@mixin ResponsiveBodyXL {
+  @include BodyXL;
+
+  @media (max-width: 796px) {
+    @include BodyL;
+  }
+}
+
+@mixin ResponsiveBodyL {
+  @include BodyXL;
+
+  @media (max-width: 796px) {
+    @include BodyM;
+  }
+}
+
+@mixin ResponsiveHeadingS {
+  @include HeadingS;
+
+  @media (max-width: 1024px) {
+    @include HeadingXS;
+  }
+}

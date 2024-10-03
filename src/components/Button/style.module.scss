@@ -1,0 +1,48 @@
+@use "src/colors" as colors;
+@use "src/typographies" as typographies;
+@use "src/mode" as mode;
+
+.button {
+  @include typographies.ButtonM;
+
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  border: 2px solid colors.$PrimaryButton;
+  background-color: colors.$PrimaryButton;
+  color: colors.$PrimaryButtonText;
+
+  padding: 8px 40px;
+
+  height: 48px;
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  &.__compact {
+    @include typographies.ButtonS;
+    height: 37px;
+    padding: 6px 24px;
+  }
+
+  &:hover {
+    background-color: colors.$PrimaryButtonHover;
+  }
+}
+
+.button.__outline {
+  background-color: transparent;
+
+  @include mode.light {
+    color: colors.$Purple;
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
+}

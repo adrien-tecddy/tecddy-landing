@@ -1,0 +1,154 @@
+@use "src/colors" as colors;
+@use "src/typographies" as typographies;
+@use "src/mode" as mode;
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+
+  gap: 40px;
+
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+
+  padding: 32px 32px 48px 32px;
+  box-sizing: border-box;
+
+  @media (max-width: 1400px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.item {
+  display: block;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: colors.$White;
+  background: colors.$CardBackground;
+
+  transition: background-color 300ms;
+
+  &:hover {
+    background-color: colors.$CardBackgroundHover;
+  }
+
+  @include mode.light {
+    color: colors.$Black;
+    background: colors.$Gray87;
+
+    &:hover {
+      background-color: colors.$Gray87Hover;
+    }
+  }
+}
+
+$logo-top: 30px;
+$logo-size: 88px;
+
+$head-height: $logo-top + $logo-size + 17px;
+
+.head {
+  display: block;
+  position: relative;
+  height: $head-height;
+}
+
+.logo {
+  position: absolute;
+
+  top: $logo-top;
+  left: 20px;
+
+  width: $logo-size;
+  height: $logo-size;
+
+  border-radius: 16px;
+
+  object-fit: contain;
+  background-color: colors.$White;
+}
+
+.title {
+  display: block;
+  @include typographies.HeadingXS;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.subtitle {
+  display: block;
+
+  @include typographies.BodyBoldS;
+  color: colors.$DarkGray;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.caption {
+  @include typographies.BodyXS;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  margin-top: 16px;
+}
+
+.caption > * {
+  margin-right: 8px;
+}
+
+.body {
+  display: block;
+  padding: 0 23px 23px 23px;
+}
+
+.chips {
+  @include typographies.BodyXS;
+  margin-top: 16px;
+  display: block;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pagination_pages {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.pagination_pages > li {
+  @include typographies.BodyM;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 24px;
+  height: 24px;
+
+  border-radius: 10px;
+  padding: 0 6px;
+  box-sizing: border-box;
+
+  &.__selected {
+    background-color: colors.$Purple;
+  }
+}

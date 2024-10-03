@@ -1,0 +1,86 @@
+@use "src/colors" as colors;
+@use "src/typographies" as typographies;
+@use "src/mode" as mode;
+
+.Steps {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.Steps_item {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 64px;
+  background: transparent url(./images/StepsBackground.svg);
+  background-repeat: repeat-y;
+  background-position: 4px;
+
+  &:last-child {
+    background: none;
+  }
+
+  @media (max-width: 796px) {
+    background-position: -20px;
+  }
+}
+
+.Steps_puce {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border: 4px solid colors.$Purple;
+  overflow: hidden;
+  margin-right: 72px;
+  flex-shrink: 0;
+  background-color: colors.$Black;
+
+  @include mode.light {
+    background-color: colors.$White;
+  }
+
+  @media (max-width: 900px) {
+    margin-right: 56px;
+  }
+
+  @media (max-width: 796px) {
+    width: 50px;
+    height: 50px;
+    margin-right: 24px;
+  }
+}
+
+.Steps_icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+  color: colors.$Purple;
+
+  @media (max-width: 796px) {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.Steps_texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Steps_title {
+  @include typographies.HeadingS;
+  margin-bottom: 16px;
+
+  @media (max-width: 900px) {
+    @include typographies.HeadingXS;
+  }
+}
+
+.Steps_content {
+  @include typographies.BodyL;
+}

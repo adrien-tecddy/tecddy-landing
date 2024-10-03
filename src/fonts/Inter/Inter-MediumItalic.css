@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Inter-MediumItalic";
+  src: url("Inter-MediumItalic.eot");
+  src:
+    url("Inter-MediumItalic.eot?#iefix") format("embedded-opentype"),
+    url("Inter-MediumItalic.woff2") format("woff2"),
+    url("Inter-MediumItalic.woff") format("woff"),
+    url("Inter-MediumItalic.ttf") format("ttf"),
+    url("Inter-MediumItalic.svg#Inter-MediumItalic") format("svg");
+  font-style: italic;
+  font-weight: normal;
+}

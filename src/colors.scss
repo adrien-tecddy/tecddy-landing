@@ -1,0 +1,38 @@
+@use "sass:color" as color;
+
+// Color
+
+// $Yellow: #f0dc28;
+$Yellow: #ffe830;
+
+$Black: #000;
+$White: #fff;
+
+$DarkGray: #606060;
+
+$Gray: #202020;
+
+$LightGray: #f6f6f6;
+
+$Gray60: #9c9c9c;
+
+$Gray60Hover: color.adjust($Gray60, $lightness: 15%);
+
+$Gray87: #f7f7f7;
+
+$Blue: #3dabf8;
+
+$Purple: #9146ff;
+$ElectricBlue: #3dabf8;
+$EmeraldGreen: #57f8a9;
+
+// Theme
+
+$PrimaryButton: $Purple;
+$PrimaryButtonText: $White;
+$PrimaryButtonHover: color.adjust($Purple, $lightness: 5%);
+
+$CardBackground: $Gray;
+$CardBackgroundHover: color.adjust($Gray, $lightness: 5%);
+
+$Gray87Hover: color.adjust($Gray87, $lightness: 5%);

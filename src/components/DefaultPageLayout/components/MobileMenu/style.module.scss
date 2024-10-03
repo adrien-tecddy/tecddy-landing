@@ -1,0 +1,123 @@
+@use "sass:color" as color;
+
+@use "src/colors" as colors;
+@use "src/typographies" as typographies;
+@use "src/mode" as mode;
+
+.outer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  padding: 0px 32px;
+
+  background: color.change(colors.$Black, $alpha: 0.8);
+  backdrop-filter: blur(8px);
+
+  z-index: 1;
+}
+
+.iconButton {
+  width: 48px;
+  height: 48px;
+
+  background: none;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.iconButton_icon {
+  width: 16px;
+  height: 16px;
+  display: block;
+  color: colors.$White;
+  transition: color 300ms;
+
+  @include mode.light {
+    color: colors.$Black;
+  }
+}
+
+.outer .iconButton_icon {
+  color: colors.$White;
+}
+
+.iconButton:hover .iconButton_icon {
+  color: colors.$Gray60;
+}
+
+.head {
+  height: 117px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list > li {
+  padding: 14px;
+}
+
+.list > li > a {
+  @include typographies.BodyXL;
+  text-decoration: none;
+  display: inline-block;
+
+  color: colors.$White;
+  transition: color 300ms;
+
+  &:hover {
+    color: colors.$Gray60;
+  }
+}
+
+.__appear {
+}
+.__appearActive {
+}
+.__appearDone {
+}
+
+.__enter {
+  opacity: 0;
+}
+.__enterActive {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.__enterDone {
+}
+
+.__exit {
+  opacity: 1;
+}
+.__exitActive {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.__exitDone {
+}

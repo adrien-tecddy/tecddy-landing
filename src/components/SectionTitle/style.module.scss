@@ -1,0 +1,58 @@
+@use "src/colors" as colors;
+@use "src/typographies" as typographies;
+
+.SectionTitle {
+  width: auto;
+  margin-bottom: 88px;
+  padding-top: 188px;
+}
+
+.SectionTitle.__hero {
+  padding-top: 0px;
+}
+
+.SectionTitle_title {
+  @include typographies.ResponsiveHeadingL;
+  width: auto;
+  margin-bottom: 18px;
+  text-align: center;
+
+  & strong {
+    color: colors.$Purple;
+    font-weight: inherit;
+  }
+}
+
+.SectionTitle_subtitle {
+  @include typographies.BodyL;
+  width: auto;
+  text-align: center;
+
+  margin: 0 auto;
+  max-width: 900px;
+  margin-bottom: 1rem;
+}
+
+.SectionTitle_description {
+  @include typographies.BodyL;
+  color: colors.$Gray60;
+  width: auto;
+  text-align: center;
+
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.SectionTitle_action {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: auto;
+  margin-top: 35px;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+}

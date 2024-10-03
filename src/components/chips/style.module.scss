@@ -1,0 +1,50 @@
+@use "src/colors" as colors;
+@use "src/typographies" as typographies;
+@use "src/mode" as mode;
+
+.chips {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+
+.chip {
+  @include typographies.BodyBoldL;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+  border: 2px solid colors.$ElectricBlue;
+  padding: 4px 23px;
+
+  overflow: hidden;
+
+  color: colors.$White;
+  @include mode.light {
+    color: colors.$Black;
+  }
+}
+
+.chip.__purple {
+  border-color: colors.$Purple;
+}
+
+.chip.__blue {
+  border-color: colors.$ElectricBlue;
+}
+
+.chip.__green {
+  border-color: colors.$EmeraldGreen;
+}
+
+.icon {
+  margin-right: 8px;
+  width: 1rem;
+  height: 1rem;
+}

@@ -1,0 +1,66 @@
+@use "src/colors" as colors;
+@use "src/typographies" as typographies;
+@use "src/mode" as mode;
+
+.WhyCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.WhyCards_item {
+  border-radius: 20px;
+
+  padding: 68px 40px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+
+  background-color: colors.$Gray;
+  @include mode.light {
+    background-color: colors.$Gray87;
+  }
+}
+
+.WhyCards_icon {
+  color: colors.$Purple;
+
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+
+  margin-right: 40px;
+
+  @media (max-width: 900px) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.WhyCards_illustrations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.WhyCards_texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.WhyCards_title {
+  @include typographies.ResponsiveHeadingS;
+  margin-bottom: 40px;
+}
+
+.WhyCards_content {
+  @include typographies.ResponsiveBodyL;
+}

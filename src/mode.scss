@@ -1,0 +1,58 @@
+@use "sass:selector";
+@use "sass:string";
+@use "sass:list";
+
+@mixin mode($mode) {
+  $opposite-mode: "";
+  @if $mode == "light" {
+    $opposite-mode: "dark";
+  } @else {
+    $opposite-mode: "light";
+  }
+
+  $individual-selectors: selector.parse(&);
+
+  $new-selectors: ();
+
+  // Split into individual selectors
+  @each $individual-selector in $individual-selectors {
+    // // Split by :: to find pseudo elements
+    // $parts: string.split(#{$individual-selector}, '::', 2);
+
+    @if selector.is-superselector("body", $individual-selector) {
+      $new-selectors: list.append(
+        $new-selectors,
+        "body[data-prefers-color-scheme=#{$mode}]",
+        comma
+      );
+    } @else {
+      $new-selectors: list.append(
+        $new-selectors,
+        selector.nest(
+          ":where(body[data-prefers-color-scheme=#{$mode}])",
+          $individual-selector
+        ),
+        comma
+      );
+    }
+  }
+
+  @media (prefers-color-scheme: $mode) {
+    @content;
+  }
+  @at-root #{$new-selectors} {
+    @content;
+  }
+}
+
+@mixin light {
+  @include mode("light") {
+    @content;
+  }
+}
+
+@mixin dark {
+  @include mode("dark") {
+    @content;
+  }
+}

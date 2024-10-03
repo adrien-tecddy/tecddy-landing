@@ -1,0 +1,13 @@
+@use "src/colors" as colors;
+@use "src/typographies" as typographies;
+
+.Paragraph {
+  margin: 0 auto;
+  margin-bottom: 1.7rem;
+
+  max-width: 900px;
+}
+
+.Paragraph a {
+  color: colors.$Purple;
+}
