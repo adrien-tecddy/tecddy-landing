@@ -1,5 +1,5 @@
 import DefaultPageLayout from 'src/components/DefaultPageLayout'
-import { AnchorButton, LinkButton } from 'src/components/Button'
+import { LinkButton } from 'src/components/Button'
 import IconTimeline from 'src/components/IconTimeline'
 import SectionTitle from 'src/components/SectionTitle'
 import GridCards from 'src/components/GridCards'

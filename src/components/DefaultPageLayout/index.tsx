@@ -8,7 +8,6 @@ import LogoTextImage from 'src/images/LogoText-Fit.svg?component'
 import MobileMenu from './components/MobileMenu'
 
 import scss from './style.module.scss'
-import { AnchorButton } from '../Button'
 
 interface Props {
   mainClassName?: string
