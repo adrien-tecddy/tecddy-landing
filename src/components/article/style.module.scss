@@ -1,6 +1,6 @@
-@use "sass:color" as color;
-@use "src/colors" as colors;
-@use "src/typographies" as typographies;
+@use 'sass:color' as color;
+@use 'src/colors' as colors;
+@use 'src/typographies' as typographies;
 
 .Article {
   max-width: 786px;

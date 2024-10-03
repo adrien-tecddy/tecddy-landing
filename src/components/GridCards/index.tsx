@@ -1,13 +1,13 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode } from 'react'
 
-import scss from "./style.module.scss";
+import scss from './style.module.scss'
 
 interface Props {
   items: {
-    icon?: FC<{ className?: string }>;
-    title: ReactNode;
-    content: ReactNode;
-  }[];
+    icon?: FC<{ className?: string }>
+    title: ReactNode
+    content: ReactNode
+  }[]
 }
 
 export default function GridCards({ items }: Props) {
@@ -24,8 +24,8 @@ export default function GridCards({ items }: Props) {
               <h4 className={scss.WhyCards_content}>{content}</h4>
             </div>
           </div>
-        );
+        )
       })}
     </div>
-  );
+  )
 }

@@ -1,30 +1,28 @@
-import DefaultPageLayout from "src/components/DefaultPageLayout";
+import DefaultPageLayout from 'src/components/DefaultPageLayout'
 
-import GridCards from "src/components/GridCards";
-import NumberTimeline from "src/components/NumberTimeline";
-import SectionTitle from "src/components/SectionTitle";
-import { AnchorButton, LinkButton } from "../Button";
+import GridCards from 'src/components/GridCards'
+import NumberTimeline from 'src/components/NumberTimeline'
+import SectionTitle from 'src/components/SectionTitle'
+import { AnchorButton, LinkButton } from '../Button'
 
-import { TALENT_ORIGIN } from "src/constants/env";
+import JobApplyIcon from 'src/icons/JobApply-100.svg?component'
+import JobMatchIcon from 'src/icons/JobMatch-100.svg?component'
+import WatchIcon from 'src/icons/Watch-100.svg?component'
+import CompeteIcon from 'src/icons/Compete-100.svg?component'
+import ManageIcon from 'src/icons/Manage-100.svg?component'
+import HandshakeIcon from 'src/icons/Handshake-100.svg?component'
 
-import JobApplyIcon from "src/icons/JobApply-100.svg?component";
-import JobMatchIcon from "src/icons/JobMatch-100.svg?component";
-import WatchIcon from "src/icons/Watch-100.svg?component";
-import CompeteIcon from "src/icons/Compete-100.svg?component";
-import ManageIcon from "src/icons/Manage-100.svg?component";
-import HandshakeIcon from "src/icons/Handshake-100.svg?component";
-
-import MetaDescription from "../meta/MetaDescription";
-import MetaTitle from "../meta/MetaTitle";
-import MetaKeywords from "../meta/MetaKeywords";
-import ButtonsSection from "../ButtonsSection";
+import MetaDescription from '../meta/MetaDescription'
+import MetaTitle from '../meta/MetaTitle'
+import MetaKeywords from '../meta/MetaKeywords'
+import ButtonsSection from '../ButtonsSection'
 
 export default function CandidatePage() {
   return (
     <DefaultPageLayout>
       <MetaTitle content="Find IT jobs in Hong Kong with Tecddy" />
       <MetaDescription content="Tecddy simplifies finding your IT job in Hong Kong. Our AI platform connects you with IT career opportunities, matching your skills with the right job openings." />
-      <MetaKeywords content={["Find job", "IT career", "Resume"]} />
+      <MetaKeywords content={['Find job', 'IT career', 'Resume']} />
       <SectionTitle
         variant="hero"
         title={
@@ -46,7 +44,6 @@ export default function CandidatePage() {
         }
         action={
           <>
-            <AnchorButton href={`${TALENT_ORIGIN}/`}>Find Jobs</AnchorButton>
             <LinkButton variant="outline" href="/">
               Hire Talents
             </LinkButton>
@@ -77,10 +74,10 @@ export default function CandidatePage() {
       <NumberTimeline items={STEPS} />
 
       <ButtonsSection>
-        <LinkButton href={"/companies"}>Discover More</LinkButton>
+        <LinkButton href={'/companies'}>Discover More</LinkButton>
       </ButtonsSection>
     </DefaultPageLayout>
-  );
+  )
 }
 
 const CARDS = [
@@ -114,7 +111,7 @@ const CARDS = [
     title: `Personal Support`,
     content: `Receive personalized support from our talent partners, who will guide you through the IT job search process and help you succeed in landing the perfect IT career opportunity.`,
   },
-];
+]
 
 const STEPS = [
   {
@@ -137,4 +134,4 @@ const STEPS = [
     title: `Track Your Applications`,
     content: `Keep your IT job search organised by tracking your application status in our dashboard. Monitor your progress and receive real-time updates on employer responses.`,
   },
-];
+]

@@ -1,4 +1,4 @@
-import DefaultPageLayout from "src/components/DefaultPageLayout";
+import DefaultPageLayout from 'src/components/DefaultPageLayout'
 
 const dangerouslySetInnerHTML = {
   __html: `
@@ -295,7 +295,7 @@ const dangerouslySetInnerHTML = {
             UNDERSTAND THEM AND AGREE TO ALL OF THE TERMS AND CONDITIONS IN OUR TERMS OF SERVICE.</span></p>
 </div>
   `,
-};
+}
 
 const STYLE = {
   __html: `
@@ -3401,7 +3401,7 @@ const STYLE = {
         text-align: left
     }
     `,
-};
+}
 
 export default function PagesTermsAndConditionsIndex() {
   return (
@@ -3412,5 +3412,5 @@ export default function PagesTermsAndConditionsIndex() {
         dangerouslySetInnerHTML={dangerouslySetInnerHTML}
       />
     </DefaultPageLayout>
-  );
+  )
 }

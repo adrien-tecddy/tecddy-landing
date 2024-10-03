@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "Inter-ThinItalic";
-  src: url("Inter-ThinItalic.eot");
+  font-family: 'Inter-ThinItalic';
+  src: url('Inter-ThinItalic.eot');
   src:
-    url("Inter-ThinItalic.eot?#iefix") format("embedded-opentype"),
-    url("Inter-ThinItalic.woff2") format("woff2"),
-    url("Inter-ThinItalic.woff") format("woff"),
-    url("Inter-ThinItalic.ttf") format("ttf"),
-    url("Inter-ThinItalic.svg#Inter-ThinItalic") format("svg");
+    url('Inter-ThinItalic.eot?#iefix') format('embedded-opentype'),
+    url('Inter-ThinItalic.woff2') format('woff2'),
+    url('Inter-ThinItalic.woff') format('woff'),
+    url('Inter-ThinItalic.ttf') format('ttf'),
+    url('Inter-ThinItalic.svg#Inter-ThinItalic') format('svg');
   font-style: italic;
   font-weight: 100;
 }

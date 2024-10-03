@@ -1,20 +1,20 @@
-import clsx from "clsx/lite";
-import Link from "next/link";
-import { ComponentProps } from "react";
+import clsx from 'clsx/lite'
+import Link from 'next/link'
+import { ComponentProps } from 'react'
 
-import scss from "./style.module.scss";
+import scss from './style.module.scss'
 
 const VARIANTS = {
   primary: scss.__primary,
   outline: scss.__outline,
-} as const;
+} as const
 
 interface Props {
-  variant?: keyof typeof VARIANTS;
-  compact?: boolean;
+  variant?: keyof typeof VARIANTS
+  compact?: boolean
 }
 
-type ButtonProps<T> = Props & Omit<T, "className">;
+type ButtonProps<T> = Props & Omit<T, 'className'>
 
 export default function Button({
   children,
@@ -38,7 +38,7 @@ export default function Button({
     >
       {children}
     </button>
-  );
+  )
 }
 
 export function AnchorButton({
@@ -63,7 +63,7 @@ export function AnchorButton({
     >
       {children}
     </a>
-  );
+  )
 }
 
 export function LinkButton({
@@ -83,5 +83,5 @@ export function LinkButton({
     >
       {children}
     </Link>
-  );
+  )
 }

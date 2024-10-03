@@ -1,33 +1,33 @@
-import { AppProps } from "next/app";
-import Head from "next/head";
-import { GoogleAnalytics, GoogleTagManager } from "src/tecddy-next/google";
+import { AppProps } from 'next/app'
+import Head from 'next/head'
+import { GoogleAnalytics, GoogleTagManager } from 'src/tecddy-next/google'
 
-import favicon from "src/images/favicon.ico";
-import ogImage from "src/images/DefaultOpenGraph.png";
-import MetaDescription from "src/components/meta/MetaDescription";
-import IconSvg144 from "src/images/Icon-144.svg?url";
+import favicon from 'src/images/favicon.ico'
+import ogImage from 'src/images/DefaultOpenGraph.png'
+import MetaDescription from 'src/components/meta/MetaDescription'
+import IconSvg144 from 'src/images/Icon-144.svg?url'
 
-import { TECDDY_TWITTER_ID } from "src/constants/env";
+import { TECDDY_TWITTER_ID } from 'src/constants/env'
 
-import "./style.scss";
-import MetaTitle from "src/components/meta/MetaTitle";
+import './style.scss'
+import MetaTitle from 'src/components/meta/MetaTitle'
 import {
   META_DESCRIPTION,
   META_LOCALE,
   META_NAME,
   META_THEME_COLOR,
   META_TITLE,
-} from "src/constants/meta";
-import { HubSpotAnalytics } from "src/components/HubSpotAnalytics";
+} from 'src/constants/meta'
+import { HubSpotAnalytics } from 'src/components/HubSpotAnalytics'
 
 // eslint-disable-next-line no-console -- NOTE: Log NEXT_PUBLIC_BUILD_WORKSPACE
 console.info(
   `NEXT_PUBLIC_BUILD_WORKSPACE: ${process.env.NEXT_PUBLIC_BUILD_WORKSPACE}`,
-);
+)
 // eslint-disable-next-line no-console -- NOTE: Log NEXT_PUBLIC_BUILD_TAG
-console.info(`NEXT_PUBLIC_BUILD_TAG: ${process.env.NEXT_PUBLIC_BUILD_TAG}`);
+console.info(`NEXT_PUBLIC_BUILD_TAG: ${process.env.NEXT_PUBLIC_BUILD_TAG}`)
 // eslint-disable-next-line no-console -- NOTE: Log NEXT_PUBLIC_BUILD_STAGE
-console.info(`NEXT_PUBLIC_BUILD_STAGE: ${process.env.NEXT_PUBLIC_BUILD_STAGE}`);
+console.info(`NEXT_PUBLIC_BUILD_STAGE: ${process.env.NEXT_PUBLIC_BUILD_STAGE}`)
 
 export default function UnderscoreApp({ Component, pageProps }: AppProps) {
   return (
@@ -65,12 +65,12 @@ export default function UnderscoreApp({ Component, pageProps }: AppProps) {
       {process.env.NEXT_PUBLIC_HUBSPOT_ID?.match(/[0-9]+/g) ? (
         <HubSpotAnalytics accountId={process.env.NEXT_PUBLIC_HUBSPOT_ID} />
       ) : null}
-      {process.env.NEXT_PUBLIC_GA_ID?.startsWith("G-") ? (
+      {process.env.NEXT_PUBLIC_GA_ID?.startsWith('G-') ? (
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
       ) : null}
-      {process.env.NEXT_PUBLIC_GTM_ID?.startsWith("GTM-") ? (
+      {process.env.NEXT_PUBLIC_GTM_ID?.startsWith('GTM-') ? (
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
       ) : null}
     </>
-  );
+  )
 }

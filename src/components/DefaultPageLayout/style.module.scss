@@ -1,6 +1,6 @@
-@use "src/colors" as colors;
-@use "src/typographies" as typographies;
-@use "src/mode" as mode;
+@use 'src/colors' as colors;
+@use 'src/typographies' as typographies;
+@use 'src/mode' as mode;
 
 $content-max-width: 1280px;
 

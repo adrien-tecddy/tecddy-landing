@@ -1,22 +1,21 @@
-import { ReactNode } from "react";
-import Link from "next/link";
+import { ReactNode } from 'react'
+import Link from 'next/link'
 
-import LinkedInIcon from "src/icons/LinkedInSquare-24.svg?component";
-import InstagramIcon from "src/icons/Instagram-24.svg?component";
-import LogoTextImage from "src/images/LogoText-Fit.svg?component";
+import LinkedInIcon from 'src/icons/LinkedInSquare-24.svg?component'
+import InstagramIcon from 'src/icons/Instagram-24.svg?component'
+import LogoTextImage from 'src/images/LogoText-Fit.svg?component'
 
-import MobileMenu from "./components/MobileMenu";
+import MobileMenu from './components/MobileMenu'
 
-import scss from "./style.module.scss";
-import { AnchorButton } from "../Button";
-import { EMPLOYER_ORIGIN, TALENT_ORIGIN } from "src/constants/env";
+import scss from './style.module.scss'
+import { AnchorButton } from '../Button'
 
 interface Props {
-  mainClassName?: string;
-  children: ReactNode;
+  mainClassName?: string
+  children: ReactNode
 }
 
-const LINKEDIN_URL = "https://www.linkedin.com/company/tecddy/";
+const LINKEDIN_URL = 'https://www.linkedin.com/company/tecddy/'
 
 export default function DefaultPageLayout({ children, mainClassName }: Props) {
   return (
@@ -29,16 +28,6 @@ export default function DefaultPageLayout({ children, mainClassName }: Props) {
 
           <div className={scss.header_mobile_menu}>
             <MobileMenu>
-              <li>
-                <AnchorButton compact href={`${EMPLOYER_ORIGIN}/`}>
-                  Company Login
-                </AnchorButton>
-              </li>
-              <li>
-                <AnchorButton compact href={`${TALENT_ORIGIN}/`}>
-                  Candidate Login
-                </AnchorButton>
-              </li>
               <li>
                 <Link href={`/companies`}>Discover Companies</Link>
               </li>
@@ -67,20 +56,10 @@ export default function DefaultPageLayout({ children, mainClassName }: Props) {
             <li className={scss.__hidable}>
               <Link href={`/about-us`}>About us</Link>
             </li>
-            <li>
-              <AnchorButton compact href={`${EMPLOYER_ORIGIN}/`}>
-                Company Login
-              </AnchorButton>
-            </li>
-            <li>
-              <AnchorButton compact href={`${TALENT_ORIGIN}/`}>
-                Candidate Login
-              </AnchorButton>
-            </li>
           </ul>
         </div>
       </div>
-      <main className={[scss.main, mainClassName].join(" ")}>{children}</main>
+      <main className={[scss.main, mainClassName].join(' ')}>{children}</main>
       <div className={scss.footer_outer}>
         <div className={scss.footer_inner}>
           <section className={scss.footer_socials}>
@@ -140,5 +119,5 @@ export default function DefaultPageLayout({ children, mainClassName }: Props) {
         </div>
       </div>
     </>
-  );
+  )
 }

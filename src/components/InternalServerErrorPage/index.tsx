@@ -1,8 +1,8 @@
-import DefaultPageLayout from "src/components/DefaultPageLayout";
+import DefaultPageLayout from 'src/components/DefaultPageLayout'
 
-import scss from "./style.module.scss";
-import { LinkButton } from "../Button";
-import MetaTitle from "../meta/MetaTitle";
+import scss from './style.module.scss'
+import { LinkButton } from '../Button'
+import MetaTitle from '../meta/MetaTitle'
 
 export default function InternalServerErrorPage() {
   return (
@@ -14,7 +14,7 @@ export default function InternalServerErrorPage() {
         <strong>Internal Server Error</strong>
       </h1>
       <h3 className={scss.subtitle}>Our team is working on fixing that.</h3>
-      <LinkButton href={"/"}>Back to Home</LinkButton>
+      <LinkButton href={'/'}>Back to Home</LinkButton>
     </DefaultPageLayout>
-  );
+  )
 }

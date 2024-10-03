@@ -1,20 +1,20 @@
-import DefaultPageLayout from "src/components/DefaultPageLayout";
+import DefaultPageLayout from 'src/components/DefaultPageLayout'
 
-import SectionTitle from "src/components/SectionTitle";
-import MetaTitle from "../meta/MetaTitle";
-import Head from "next/head";
+import SectionTitle from 'src/components/SectionTitle'
+import MetaTitle from '../meta/MetaTitle'
+import Head from 'next/head'
 
 export interface BusinessCard {
-  displayName: string;
-  jobTitle: string;
+  displayName: string
+  jobTitle: string
 }
 
 interface Props {
-  card: BusinessCard;
+  card: BusinessCard
 }
 
 export default function BusinessCardsPage({ card }: Props) {
-  const { displayName, jobTitle } = card;
+  const { displayName, jobTitle } = card
   return (
     <DefaultPageLayout>
       <Head>
@@ -23,5 +23,5 @@ export default function BusinessCardsPage({ card }: Props) {
       <MetaTitle content={`${displayName} - Tecddy`} />
       <SectionTitle variant="hero" title={displayName} description={jobTitle} />
     </DefaultPageLayout>
-  );
+  )
 }

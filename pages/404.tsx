@@ -1,5 +1,5 @@
-import NotFoundPage from "src/components/NotFoundPage";
+import NotFoundPage from 'src/components/NotFoundPage'
 
 export default function FourZeroFour() {
-  return <NotFoundPage />;
+  return <NotFoundPage />
 }

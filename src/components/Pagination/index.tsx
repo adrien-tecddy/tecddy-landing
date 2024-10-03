@@ -1,12 +1,12 @@
-import { useMemo, memo } from "react";
-import Link from "next/link";
+import { useMemo, memo } from 'react'
+import Link from 'next/link'
 
-import scss from "./style.module.scss";
+import scss from './style.module.scss'
 
 interface PaginationProps {
-  pathname: string;
-  current: number;
-  total: number;
+  pathname: string
+  current: number
+  total: number
 }
 
 const Pagination = memo(function Pagination({
@@ -15,17 +15,17 @@ const Pagination = memo(function Pagination({
   total,
 }: PaginationProps) {
   const pages = useMemo(() => {
-    const min = Math.max(current - 3, 0);
-    const max = Math.min(current + 3, total);
+    const min = Math.max(current - 3, 0)
+    const max = Math.min(current + 3, total)
 
-    const indexes: number[] = [];
+    const indexes: number[] = []
 
     for (let i = min; i <= max; i++) {
-      indexes.push(i);
+      indexes.push(i)
     }
 
-    return indexes;
-  }, [current, total]);
+    return indexes
+  }, [current, total])
 
   return (
     <div className={scss.pagination}>
@@ -33,11 +33,11 @@ const Pagination = memo(function Pagination({
         {current !== 0 && (
           <>
             <li key="first">
-              <Link href={{ pathname, query: { page: 0 } }}>{"First"}</Link>
+              <Link href={{ pathname, query: { page: 0 } }}>{'First'}</Link>
             </li>
             <li key="prev">
               <Link href={{ pathname, query: { page: current - 1 } }}>
-                {"Previous"}
+                {'Previous'}
               </Link>
             </li>
           </>
@@ -52,19 +52,19 @@ const Pagination = memo(function Pagination({
                 {index + 1}
               </Link>
             </li>
-          );
+          )
         })}
         <li key="next">
           <Link href={{ pathname, query: { page: current + 1 } }}>
-            {"Next"}
+            {'Next'}
           </Link>
         </li>
         <li key="last">
-          <Link href={{ pathname, query: { page: total } }}>{"Last"}</Link>
+          <Link href={{ pathname, query: { page: total } }}>{'Last'}</Link>
         </li>
       </ul>
     </div>
-  );
-});
+  )
+})
 
-export default Pagination;
+export default Pagination

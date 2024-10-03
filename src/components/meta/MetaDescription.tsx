@@ -1,9 +1,9 @@
-import Head from "next/head";
+import Head from 'next/head'
 
-import { TECDDY_TWITTER_ID } from "src/constants/env";
+import { TECDDY_TWITTER_ID } from 'src/constants/env'
 
 interface MetaDescriptionProps {
-  content: string;
+  content: string
 }
 
 export default function MetaDescription({ content }: MetaDescriptionProps) {
@@ -19,5 +19,5 @@ export default function MetaDescription({ content }: MetaDescriptionProps) {
         />
       ) : null}
     </Head>
-  );
+  )
 }

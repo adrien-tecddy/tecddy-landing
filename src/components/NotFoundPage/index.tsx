@@ -1,8 +1,8 @@
-import DefaultPageLayout from "src/components/DefaultPageLayout";
+import DefaultPageLayout from 'src/components/DefaultPageLayout'
 
-import scss from "./style.module.scss";
-import { LinkButton } from "../Button";
-import MetaTitle from "../meta/MetaTitle";
+import scss from './style.module.scss'
+import { LinkButton } from '../Button'
+import MetaTitle from '../meta/MetaTitle'
 
 export default function NotFoundPage() {
   return (
@@ -16,7 +16,7 @@ export default function NotFoundPage() {
       <h3 className={scss.subtitle}>
         We can’t find the page you are looking for.
       </h3>
-      <LinkButton href={"/"}>Back to Home</LinkButton>
+      <LinkButton href={'/'}>Back to Home</LinkButton>
     </DefaultPageLayout>
-  );
+  )
 }

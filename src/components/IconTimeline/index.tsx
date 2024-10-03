@@ -1,12 +1,12 @@
-import { FC, ReactNode } from "react";
-import scss from "./style.module.scss";
+import { FC, ReactNode } from 'react'
+import scss from './style.module.scss'
 
 interface StepsProps {
   items: {
-    icon: FC<{ className?: string }>;
-    content: ReactNode;
-    title: ReactNode;
-  }[];
+    icon: FC<{ className?: string }>
+    content: ReactNode
+    title: ReactNode
+  }[]
 }
 
 export default function IconTimeline({ items }: StepsProps) {
@@ -27,5 +27,5 @@ export default function IconTimeline({ items }: StepsProps) {
         </div>
       ))}
     </div>
-  );
+  )
 }

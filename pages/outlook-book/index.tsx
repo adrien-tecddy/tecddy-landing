@@ -1,24 +1,24 @@
-import { GetServerSideProps } from "next";
-import RedirectOutlookBookPage from "src/components/RedirectOutlookBookPage";
+import { GetServerSideProps } from 'next'
+import RedirectOutlookBookPage from 'src/components/RedirectOutlookBookPage'
 
 interface Props {
-  bookingId: string;
+  bookingId: string
 }
 
 // eslint-disable-next-line @typescript-eslint/require-await -- GetServerSideProps require promise
 export const getServerSideProps = (async (ctx) => {
-  const bookingId = ctx.query["booking-id"];
+  const bookingId = ctx.query['booking-id']
 
   return {
     props: {
       bookingId:
-        typeof bookingId === "string"
+        typeof bookingId === 'string'
           ? bookingId
-          : "DiscoverycallwTecddy@tecddy.com",
+          : 'DiscoverycallwTecddy@tecddy.com',
     },
-  };
-}) satisfies GetServerSideProps<Props>;
+  }
+}) satisfies GetServerSideProps<Props>
 
 export default function PagesOutlookBookIndex({ bookingId }: Props) {
-  return <RedirectOutlookBookPage bookingId={bookingId} />;
+  return <RedirectOutlookBookPage bookingId={bookingId} />
 }

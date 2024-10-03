@@ -1,31 +1,30 @@
-import { Article, Buttons, References } from "src/components/article";
-import { AnchorButton, LinkButton } from "src/components/Button";
-import DefaultPageLayout from "src/components/DefaultPageLayout";
-import MetaDescription from "src/components/meta/MetaDescription";
-import MetaKeywords from "src/components/meta/MetaKeywords";
-import MetaTitle from "src/components/meta/MetaTitle";
-import { EMPLOYER_ORIGIN } from "src/constants/env";
+import { Article, Buttons, References } from 'src/components/article'
+import { LinkButton } from 'src/components/Button'
+import DefaultPageLayout from 'src/components/DefaultPageLayout'
+import MetaDescription from 'src/components/meta/MetaDescription'
+import MetaKeywords from 'src/components/meta/MetaKeywords'
+import MetaTitle from 'src/components/meta/MetaTitle'
 
 const KEYWORDS = [
-  "Hong Kong hiring trends",
-  "tech recruiting",
-  "tech recruitment challenges",
-  "AI-powered recruitment",
-  "tech hiring solutions",
-];
-const TITLE = `Overcoming Hiring Challenges with Tecddy's Tech Recruiting Solutions`;
-const DESCRIPTION = `Discover Hong Kong's latest hiring trends and how startups can overcome recruitment challenges. Learn how Tecddy's AI-powered platform can revolutionize your hiring process and drive success.`;
+  'Hong Kong hiring trends',
+  'tech recruiting',
+  'tech recruitment challenges',
+  'AI-powered recruitment',
+  'tech hiring solutions',
+]
+const TITLE = `Overcoming Hiring Challenges with Tecddy's Tech Recruiting Solutions`
+const DESCRIPTION = `Discover Hong Kong's latest hiring trends and how startups can overcome recruitment challenges. Learn how Tecddy's AI-powered platform can revolutionize your hiring process and drive success.`
 const REFERENCES = [
   {
     label:
-      "Cobloom - The Ultimate Startup Hiring Guide: How to Build A Winning Team",
-    href: "https://www.cobloom.com/blog/startup-hiring",
+      'Cobloom - The Ultimate Startup Hiring Guide: How to Build A Winning Team',
+    href: 'https://www.cobloom.com/blog/startup-hiring',
   },
   {
-    label: "Bamboohr - Tech Recruiting Guide: 8 Tips to Snag Top Talent",
-    href: "https://www.bamboohr.com/blog/tech-recruiting-top-talent",
+    label: 'Bamboohr - Tech Recruiting Guide: 8 Tips to Snag Top Talent',
+    href: 'https://www.bamboohr.com/blog/tech-recruiting-top-talent',
   },
-];
+]
 
 export default function PagesArticlesIndex() {
   return (
@@ -168,12 +167,11 @@ export default function PagesArticlesIndex() {
         </p>
       </Article>
       <Buttons title="Ready to revolutionize your hiring process?">
-        <AnchorButton href={`${EMPLOYER_ORIGIN}/`}>Hire Talents</AnchorButton>
         <LinkButton variant="outline" href="/talent">
           Find Jobs
         </LinkButton>
       </Buttons>
       <References items={REFERENCES} />
     </DefaultPageLayout>
-  );
+  )
 }

@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "MonumentExtended-Regular";
-  src: url("MonumentExtended-Regular.eot");
+  font-family: 'MonumentExtended-Regular';
+  src: url('MonumentExtended-Regular.eot');
   src:
-    url("MonumentExtended-Regular.eot?#iefix") format("embedded-opentype"),
-    url("MonumentExtended-Regular.woff2") format("woff2"),
-    url("MonumentExtended-Regular.woff") format("woff"),
-    url("MonumentExtended-Regular.ttf") format("ttf"),
-    url("MonumentExtended-Regular.svg#MonumentExtended-Regular") format("svg");
+    url('MonumentExtended-Regular.eot?#iefix') format('embedded-opentype'),
+    url('MonumentExtended-Regular.woff2') format('woff2'),
+    url('MonumentExtended-Regular.woff') format('woff'),
+    url('MonumentExtended-Regular.ttf') format('ttf'),
+    url('MonumentExtended-Regular.svg#MonumentExtended-Regular') format('svg');
   font-style: normal;
   font-weight: regular;
 }

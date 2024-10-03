@@ -1,26 +1,24 @@
-import DefaultPageLayout from "src/components/DefaultPageLayout";
-import { AnchorButton, LinkButton } from "src/components/Button";
-import IconTimeline from "src/components/IconTimeline";
-import SectionTitle from "src/components/SectionTitle";
-import GridCards from "src/components/GridCards";
+import DefaultPageLayout from 'src/components/DefaultPageLayout'
+import { AnchorButton, LinkButton } from 'src/components/Button'
+import IconTimeline from 'src/components/IconTimeline'
+import SectionTitle from 'src/components/SectionTitle'
+import GridCards from 'src/components/GridCards'
 
-import ClipboardIcon from "src/icons/Clipboard-60.svg?component";
-import InterviewIcon from "src/icons/Interview-60.svg?component";
-import RankIcon from "src/icons/Rank-60.svg?component";
-import CreateIcon from "src/icons/Create-60.svg?component";
-import WorkflowIcon from "src/icons/Workflow-100.svg?component";
-import TimeSavingIcon from "src/icons/TimeSaving-100.svg?component";
-import ScaleIcon from "src/icons/Scale-100.svg?component";
-import HiringIcon from "src/icons/Hiring-100.svg?component";
-import EvaluateIcon from "src/icons/Evaluate-100.svg?component";
-import DetectIcon from "src/icons/Detect-100.svg?component";
-import ManageIcon from "src/icons/Manage-100.svg?component";
+import ClipboardIcon from 'src/icons/Clipboard-60.svg?component'
+import InterviewIcon from 'src/icons/Interview-60.svg?component'
+import RankIcon from 'src/icons/Rank-60.svg?component'
+import CreateIcon from 'src/icons/Create-60.svg?component'
+import WorkflowIcon from 'src/icons/Workflow-100.svg?component'
+import TimeSavingIcon from 'src/icons/TimeSaving-100.svg?component'
+import ScaleIcon from 'src/icons/Scale-100.svg?component'
+import HiringIcon from 'src/icons/Hiring-100.svg?component'
+import EvaluateIcon from 'src/icons/Evaluate-100.svg?component'
+import DetectIcon from 'src/icons/Detect-100.svg?component'
+import ManageIcon from 'src/icons/Manage-100.svg?component'
 
-import { EMPLOYER_ORIGIN } from "src/constants/env";
+import JourneyImageSource from './images/Journey.svg?url'
 
-import JourneyImageSource from "./images/Journey.svg?url";
-
-import scss from "./style.module.scss";
+import scss from './style.module.scss'
 
 export default function EmployerPage() {
   return (
@@ -36,9 +34,6 @@ export default function EmployerPage() {
         }
         action={
           <>
-            <AnchorButton href={`${EMPLOYER_ORIGIN}/`}>
-              Hire Talents
-            </AnchorButton>
             <LinkButton variant="outline" href="/talent">
               Find Jobs
             </LinkButton>
@@ -99,7 +94,7 @@ export default function EmployerPage() {
       <SectionTitle title="Why Choose Tecddy" />
       <GridCards items={WHY_CARDS} />
     </DefaultPageLayout>
-  );
+  )
 }
 const STEPS = [
   {
@@ -122,7 +117,7 @@ const STEPS = [
     content: `Receive detailed evaluation reports and feedback for each candidate. These reports provide valuable insights into their technical skills, strengths, and areas for improvement, enabling you to make informed hiring decisions.`,
     icon: ClipboardIcon,
   },
-];
+]
 
 const WHY_CARDS = [
   {
@@ -160,4 +155,4 @@ const WHY_CARDS = [
     title: `Equitable Candidate Experience`,
     content: `Promote fairness and unbiased evaluations. We provide an equitable experience, assessing candidates solely based on their merits.`,
   },
-];
+]

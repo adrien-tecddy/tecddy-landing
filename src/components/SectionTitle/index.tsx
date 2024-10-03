@@ -1,18 +1,18 @@
-import { ReactNode } from "react";
-import clsx from "clsx/lite";
+import { ReactNode } from 'react'
+import clsx from 'clsx/lite'
 
-import scss from "./style.module.scss";
+import scss from './style.module.scss'
 
 const VARIANTS = {
   hero: scss.__hero,
-} as const;
+} as const
 
 interface SectionTitleProps {
-  title: ReactNode;
-  action?: ReactNode;
-  subtitle?: ReactNode;
-  description?: ReactNode;
-  variant?: keyof typeof VARIANTS;
+  title: ReactNode
+  action?: ReactNode
+  subtitle?: ReactNode
+  description?: ReactNode
+  variant?: keyof typeof VARIANTS
 }
 
 export default function SectionTitle({
@@ -22,7 +22,7 @@ export default function SectionTitle({
   subtitle,
   description,
 }: SectionTitleProps) {
-  const Tag = variant === "hero" ? "h1" : "h2";
+  const Tag = variant === 'hero' ? 'h1' : 'h2'
 
   return (
     <div className={clsx(scss.SectionTitle, variant && VARIANTS[variant])}>
@@ -33,5 +33,5 @@ export default function SectionTitle({
       )}
       {action && <div className={scss.SectionTitle_action}>{action}</div>}
     </div>
-  );
+  )
 }

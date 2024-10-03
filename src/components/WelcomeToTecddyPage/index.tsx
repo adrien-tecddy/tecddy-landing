@@ -1,23 +1,21 @@
-import Link from "next/link";
-import { useCallback } from "react";
-import { sendGAEvent } from "src/tecddy-next/google";
+import Link from 'next/link'
+import { useCallback } from 'react'
+import { sendGAEvent } from 'src/tecddy-next/google'
 
-import DefaultPageLayout from "src/components/DefaultPageLayout";
-import Button from "src/components/Button";
-import SectionTitle from "src/components/SectionTitle";
+import DefaultPageLayout from 'src/components/DefaultPageLayout'
+import Button from 'src/components/Button'
+import SectionTitle from 'src/components/SectionTitle'
 
-import { EMPLOYER_ORIGIN } from "src/constants/env";
-
-import scss from "./style.module.scss";
-import MetaTitle from "../meta/MetaTitle";
+import scss from './style.module.scss'
+import MetaTitle from '../meta/MetaTitle'
 
 export default function WelcomeToTecddyPage() {
   const onClick = useCallback(() => {
-    sendGAEvent("event", "clickOutlookBookDiscoveryCallWithTecddy");
+    sendGAEvent('event', 'clickOutlookBookDiscoveryCallWithTecddy')
     window.open(
-      "https://outlook.office365.com/book/DiscoverycallwTecddy@tecddy.com/",
-    );
-  }, []);
+      'https://outlook.office365.com/book/DiscoverycallwTecddy@tecddy.com/',
+    )
+  }, [])
 
   return (
     <DefaultPageLayout>
@@ -64,13 +62,11 @@ export default function WelcomeToTecddyPage() {
         developers, create a free job ad with us, it comes with an AI-powered
         assessment that automatically rank candidates based on their skills, and
         we offer on-demand technical interview service.
-        <br />
-        <a href={`${EMPLOYER_ORIGIN}/`}>Start hiring</a>
       </div>
 
       <div className={scss.Paragraph}>
         Please don’t hesitate to book a time with me if you need help on:
-        <ul style={{ listStyleType: "disc" }}>
+        <ul style={{ listStyleType: 'disc' }}>
           <li>
             hiring someone technical, your first software engineer, or interns
           </li>
@@ -83,5 +79,5 @@ export default function WelcomeToTecddyPage() {
         </Button>
       </div>
     </DefaultPageLayout>
-  );
+  )
 }

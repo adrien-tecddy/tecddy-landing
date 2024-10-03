@@ -2,8 +2,8 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
-  transpilePackages: ["ui", "tecddy-design-system"],
-  output: "standalone",
+  transpilePackages: ['ui', 'tecddy-design-system'],
+  output: 'standalone',
   assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX || undefined,
   webpack(config) {
     config.module.rules.push({
@@ -12,12 +12,12 @@ module.exports = {
       issuer: /\.[jt]sx?$/,
       use: [
         {
-          loader: "@svgr/webpack",
+          loader: '@svgr/webpack',
           options: {
             svgoConfig: {
               plugins: [
                 {
-                  name: "preset-default",
+                  name: 'preset-default',
                   params: {
                     overrides: {
                       removeViewBox: false,
@@ -31,57 +31,57 @@ module.exports = {
           },
         },
       ],
-    });
+    })
 
     config.module.rules.push({
       test: /\.svg$/i,
       resourceQuery: /url/,
       issuer: /\.[jt]sx?$/,
-      type: "asset/resource",
-    });
+      type: 'asset/resource',
+    })
 
-    return config;
+    return config
   },
   async rewrites() {
     return [
       {
-        source: "/robots.txt",
-        destination: "/api/robots-txt",
+        source: '/robots.txt',
+        destination: '/api/robots-txt',
       },
       {
-        source: "/favicon.ico",
-        destination: `${process.env.NEXT_PUBLIC_ASSET_PREFIX || ""}/_next/static/media/favicon.c9bef198.ico`,
+        source: '/favicon.ico',
+        destination: `${process.env.NEXT_PUBLIC_ASSET_PREFIX || ''}/_next/static/media/favicon.c9bef198.ico`,
       },
       {
-        source: "/manifest.json",
+        source: '/manifest.json',
         destination: `/api/manifest`,
       },
       {
-        source: "/sitemap.xml",
-        destination: "/api/sitemap-xml",
+        source: '/sitemap.xml',
+        destination: '/api/sitemap-xml',
       },
       {
-        source: "/.well-known/apple-app-site-association",
-        destination: "/api/.well-known/apple-app-site-association",
+        source: '/.well-known/apple-app-site-association',
+        destination: '/api/.well-known/apple-app-site-association',
       },
       {
-        source: "/.well-known/app-supported-versions",
-        destination: "/api/.well-known/app-supported-versions",
+        source: '/.well-known/app-supported-versions',
+        destination: '/api/.well-known/app-supported-versions',
       },
-    ];
+    ]
   },
-};
+}
 
 // Injected content via Sentry wizard below
 
-const { withSentryConfig } = require("@sentry/nextjs");
+const { withSentryConfig } = require('@sentry/nextjs')
 
 module.exports = withSentryConfig(module.exports, {
   // For all available options, see:
   // https://github.com/getsentry/sentry-webpack-plugin#options
 
-  org: "teccdy",
-  project: "www",
+  org: 'teccdy',
+  project: 'www',
 
   telemetry: false,
 
@@ -111,4 +111,4 @@ module.exports = withSentryConfig(module.exports, {
   // https://docs.sentry.io/product/crons/
   // https://vercel.com/docs/cron-jobs
   automaticVercelMonitors: false,
-});
+})

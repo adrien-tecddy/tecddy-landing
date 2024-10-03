@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "Inter-SemiBoldItalic";
-  src: url("Inter-SemiBoldItalic.eot");
+  font-family: 'Inter-SemiBoldItalic';
+  src: url('Inter-SemiBoldItalic.eot');
   src:
-    url("Inter-SemiBoldItalic.eot?#iefix") format("embedded-opentype"),
-    url("Inter-SemiBoldItalic.woff2") format("woff2"),
-    url("Inter-SemiBoldItalic.woff") format("woff"),
-    url("Inter-SemiBoldItalic.ttf") format("ttf"),
-    url("Inter-SemiBoldItalic.svg#Inter-SemiBoldItalic") format("svg");
+    url('Inter-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('Inter-SemiBoldItalic.woff2') format('woff2'),
+    url('Inter-SemiBoldItalic.woff') format('woff'),
+    url('Inter-SemiBoldItalic.ttf') format('ttf'),
+    url('Inter-SemiBoldItalic.svg#Inter-SemiBoldItalic') format('svg');
   font-style: italic;
   font-weight: demi;
 }

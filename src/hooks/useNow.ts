@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
 export default function useNow() {
-  const [now, setNow] = useState<Date | null>(null);
+  const [now, setNow] = useState<Date | null>(null)
 
   useEffect(() => {
-    setNow(new Date());
-  }, [setNow]);
+    setNow(new Date())
+  }, [setNow])
 
-  return now;
+  return now
 }

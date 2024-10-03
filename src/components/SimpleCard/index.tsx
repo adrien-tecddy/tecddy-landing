@@ -1,10 +1,10 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
-import scss from "./style.module.scss";
+import scss from './style.module.scss'
 
 interface Props {
-  children: ReactNode;
-  title: ReactNode;
+  children: ReactNode
+  title: ReactNode
 }
 
 export default function SimpleCard({ children, title }: Props) {
@@ -13,5 +13,5 @@ export default function SimpleCard({ children, title }: Props) {
       <div className={scss.title}>{title}</div>
       <div className={scss.content}>{children}</div>
     </div>
-  );
+  )
 }

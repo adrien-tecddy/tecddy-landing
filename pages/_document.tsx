@@ -1,8 +1,8 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript } from 'next/document'
 
 const NEXT_PUBLIC_ALLOW_INDEXING = Boolean(
   process.env.NEXT_PUBLIC_ALLOW_INDEXING,
-);
+)
 
 export default function UnderscoreDocument() {
   return (
@@ -18,5 +18,5 @@ export default function UnderscoreDocument() {
         <NextScript />
       </body>
     </Html>
-  );
+  )
 }

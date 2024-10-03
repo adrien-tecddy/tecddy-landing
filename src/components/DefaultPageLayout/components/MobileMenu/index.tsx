@@ -1,13 +1,13 @@
-import { ReactNode, useCallback, useRef, useState } from "react";
-import { CSSTransition } from "react-transition-group";
+import { ReactNode, useCallback, useRef, useState } from 'react'
+import { CSSTransition } from 'react-transition-group'
 
-import MenuIcon from "src/icons/Menu-16.svg?component";
-import CloseIcon from "src/icons/Close-16.svg?component";
+import MenuIcon from 'src/icons/Menu-16.svg?component'
+import CloseIcon from 'src/icons/Close-16.svg?component'
 
-import LogoTextImage from "src/images/LogoText-Fit.svg?component";
+import LogoTextImage from 'src/images/LogoText-Fit.svg?component'
 
-import scss from "./style.module.scss";
-import Link from "next/link";
+import scss from './style.module.scss'
+import Link from 'next/link'
 
 const CLASS_NAMES = {
   appear: scss.__appear,
@@ -19,19 +19,19 @@ const CLASS_NAMES = {
   exit: scss.__exit,
   exitActive: scss.__exitActive,
   exitDone: scss.__exitDone,
-};
+}
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export default function MobileMenu({ children }: Props) {
-  const [state, setState] = useState<boolean>(false);
-  const nodeRef = useRef(null);
+  const [state, setState] = useState<boolean>(false)
+  const nodeRef = useRef(null)
 
   const toggle = useCallback(() => {
-    setState((s) => !s);
-  }, [setState]);
+    setState((s) => !s)
+  }, [setState])
 
   return (
     <>
@@ -64,5 +64,5 @@ export default function MobileMenu({ children }: Props) {
         </div>
       </CSSTransition>
     </>
-  );
+  )
 }

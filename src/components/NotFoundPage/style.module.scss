@@ -1,5 +1,5 @@
-@use "src/colors" as colors;
-@use "src/typographies" as typographies;
+@use 'src/colors' as colors;
+@use 'src/typographies' as typographies;
 
 .main {
   background: transparent url(./images/Background.svg) no-repeat;

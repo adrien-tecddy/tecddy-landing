@@ -1,11 +1,11 @@
-import { ReactNode } from "react";
-import scss from "./style.module.scss";
+import { ReactNode } from 'react'
+import scss from './style.module.scss'
 
 interface Props {
   items: {
-    content: ReactNode;
-    title: ReactNode;
-  }[];
+    content: ReactNode
+    title: ReactNode
+  }[]
 }
 
 export default function NumberTimeline({ items }: Props) {
@@ -21,5 +21,5 @@ export default function NumberTimeline({ items }: Props) {
         </div>
       ))}
     </div>
-  );
+  )
 }

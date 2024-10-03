@@ -1,34 +1,34 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
-import scss from "./style.module.scss";
+import scss from './style.module.scss'
 
 export function Lead({ children }: { children: ReactNode }) {
-  return <p className={scss.Lead}>{children}</p>;
+  return <p className={scss.Lead}>{children}</p>
 }
 
 export function Article({ children }: { children: ReactNode }) {
-  return <div className={scss.Article}>{children}</div>;
+  return <div className={scss.Article}>{children}</div>
 }
 
 export function Buttons({
   children,
   title,
 }: {
-  title: ReactNode;
-  children: ReactNode;
+  title: ReactNode
+  children: ReactNode
 }) {
   return (
     <div className={scss.Buttons}>
       <div className={scss.Buttons_title}>{title}</div>
       <div className={scss.Buttons_children}>{children}</div>
     </div>
-  );
+  )
 }
 
 export function References({
   items,
 }: {
-  items: { label: ReactNode; href: string }[];
+  items: { label: ReactNode; href: string }[]
 }) {
   return (
     <div className={scss.References}>
@@ -43,5 +43,5 @@ export function References({
         ))}
       </ul>
     </div>
-  );
+  )
 }

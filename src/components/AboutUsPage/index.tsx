@@ -1,7 +1,7 @@
-import DefaultPageLayout from "src/components/DefaultPageLayout";
+import DefaultPageLayout from 'src/components/DefaultPageLayout'
 
-import SectionTitle from "src/components/SectionTitle";
-import MetaTitle from "../meta/MetaTitle";
+import SectionTitle from 'src/components/SectionTitle'
+import MetaTitle from '../meta/MetaTitle'
 
 export default function AboutUsPage() {
   return (
@@ -76,5 +76,5 @@ export default function AboutUsPage() {
         }
       />
     </DefaultPageLayout>
-  );
+  )
 }

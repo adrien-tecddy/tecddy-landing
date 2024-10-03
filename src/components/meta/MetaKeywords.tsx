@@ -1,13 +1,13 @@
-import Head from "next/head";
+import Head from 'next/head'
 
 interface Props {
-  content: string[];
+  content: string[]
 }
 
 export default function MetaKeywords({ content }: Props) {
   return (
     <Head>
-      <meta key="keywords" name="keywords" content={content.join(",")} />
+      <meta key="keywords" name="keywords" content={content.join(',')} />
     </Head>
-  );
+  )
 }

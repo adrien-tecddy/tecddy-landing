@@ -1,28 +1,28 @@
-@import "src/fonts/MonumentExtended/MonumentExtended-Regular.css";
-@import "src/fonts/MonumentExtended/MonumentExtended-Ultrabold.css";
-@import "src/fonts/Inter/Inter-Medium.css";
-@import "src/fonts/Inter/Inter-Bold.css";
+@import 'src/fonts/MonumentExtended/MonumentExtended-Regular.css';
+@import 'src/fonts/MonumentExtended/MonumentExtended-Ultrabold.css';
+@import 'src/fonts/Inter/Inter-Medium.css';
+@import 'src/fonts/Inter/Inter-Bold.css';
 
 @mixin MonumentExtendedRegular {
-  font-family: "MonumentExtended-Regular", Helvetica, Arial, sans-serif;
+  font-family: 'MonumentExtended-Regular', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
 }
 
 @mixin MonumentExtendedUltrabold {
-  font-family: "MonumentExtended-Ultrabold", Helvetica, Arial, sans-serif;
+  font-family: 'MonumentExtended-Ultrabold', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 800;
 }
 
 @mixin InterMedium {
-  font-family: "Inter-Medium", Helvetica, Arial, sans-serif;
+  font-family: 'Inter-Medium', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
 }
 
 @mixin InterBold {
-  font-family: "Inter-Bold", Helvetica, Arial, sans-serif;
+  font-family: 'Inter-Bold', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 700;
 }

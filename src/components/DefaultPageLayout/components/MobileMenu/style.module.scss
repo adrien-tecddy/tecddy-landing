@@ -1,8 +1,8 @@
-@use "sass:color" as color;
+@use 'sass:color' as color;
 
-@use "src/colors" as colors;
-@use "src/typographies" as typographies;
-@use "src/mode" as mode;
+@use 'src/colors' as colors;
+@use 'src/typographies' as typographies;
+@use 'src/mode' as mode;
 
 .outer {
   position: fixed;

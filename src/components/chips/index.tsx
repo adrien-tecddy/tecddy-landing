@@ -1,26 +1,26 @@
-import { ReactNode, FC } from "react";
-import clsx from "clsx/lite";
+import { ReactNode, FC } from 'react'
+import clsx from 'clsx/lite'
 
-import scss from "./style.module.scss";
+import scss from './style.module.scss'
 
 const CHIP_VARIANTS = {
   purple: scss.__purple,
   green: scss.__green,
   blue: scss.__blue,
-} as const;
+} as const
 
 interface ChipsProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export function Chips({ children }: ChipsProps) {
-  return <span className={scss.chips}>{children}</span>;
+  return <span className={scss.chips}>{children}</span>
 }
 
 interface ChipProps {
-  variant?: keyof typeof CHIP_VARIANTS;
-  icon?: FC<{ className?: string }>;
-  label: string;
+  variant?: keyof typeof CHIP_VARIANTS
+  icon?: FC<{ className?: string }>
+  label: string
 }
 
 export function Chip({ icon: Icon, variant, label }: ChipProps) {
@@ -32,5 +32,5 @@ export function Chip({ icon: Icon, variant, label }: ChipProps) {
       {Icon ? <Icon className={scss.icon} /> : null}
       {label}
     </span>
-  );
+  )
 }

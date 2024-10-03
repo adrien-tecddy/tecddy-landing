@@ -1,10 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 interface ResponseBody {
   applinks: {
-    apps: any[];
-    details: any[];
-  };
+    apps: any[]
+    details: any[]
+  }
 }
 
 export default async function handler(
@@ -25,5 +25,5 @@ export default async function handler(
         // }
       ],
     },
-  });
+  })
 }

@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "Inter-ExtraLight";
-  src: url("Inter-ExtraLight.eot");
+  font-family: 'Inter-ExtraLight';
+  src: url('Inter-ExtraLight.eot');
   src:
-    url("Inter-ExtraLight.eot?#iefix") format("embedded-opentype"),
-    url("Inter-ExtraLight.woff2") format("woff2"),
-    url("Inter-ExtraLight.woff") format("woff"),
-    url("Inter-ExtraLight.ttf") format("ttf"),
-    url("Inter-ExtraLight.svg#Inter-ExtraLight") format("svg");
+    url('Inter-ExtraLight.eot?#iefix') format('embedded-opentype'),
+    url('Inter-ExtraLight.woff2') format('woff2'),
+    url('Inter-ExtraLight.woff') format('woff'),
+    url('Inter-ExtraLight.ttf') format('ttf'),
+    url('Inter-ExtraLight.svg#Inter-ExtraLight') format('svg');
   font-style: normal;
   font-weight: extra-light;
 }

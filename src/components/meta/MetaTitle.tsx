@@ -1,9 +1,9 @@
-import Head from "next/head";
+import Head from 'next/head'
 
-import { TECDDY_TWITTER_ID } from "src/constants/env";
+import { TECDDY_TWITTER_ID } from 'src/constants/env'
 
 interface Props {
-  content: string;
+  content: string
 }
 
 export default function MetaTitle({ content }: Props) {
@@ -15,5 +15,5 @@ export default function MetaTitle({ content }: Props) {
         <meta key="twitter:title" name="twitter:title" content={content} />
       ) : null}
     </Head>
-  );
+  )
 }

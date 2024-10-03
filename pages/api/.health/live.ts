@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 interface ResponseBody {
-  stats: "live";
+  stats: 'live'
 }
 
 export default async function handler(
@@ -9,6 +9,6 @@ export default async function handler(
   res: NextApiResponse<ResponseBody>,
 ) {
   res.status(200).send({
-    stats: "live",
-  });
+    stats: 'live',
+  })
 }

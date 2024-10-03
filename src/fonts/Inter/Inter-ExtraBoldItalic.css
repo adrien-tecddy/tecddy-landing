@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "Inter-ExtraBoldItalic";
-  src: url("Inter-ExtraBoldItalic.eot");
+  font-family: 'Inter-ExtraBoldItalic';
+  src: url('Inter-ExtraBoldItalic.eot');
   src:
-    url("Inter-ExtraBoldItalic.eot?#iefix") format("embedded-opentype"),
-    url("Inter-ExtraBoldItalic.woff2") format("woff2"),
-    url("Inter-ExtraBoldItalic.woff") format("woff"),
-    url("Inter-ExtraBoldItalic.ttf") format("ttf"),
-    url("Inter-ExtraBoldItalic.svg#Inter-ExtraBoldItalic") format("svg");
+    url('Inter-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('Inter-ExtraBoldItalic.woff2') format('woff2'),
+    url('Inter-ExtraBoldItalic.woff') format('woff'),
+    url('Inter-ExtraBoldItalic.ttf') format('ttf'),
+    url('Inter-ExtraBoldItalic.svg#Inter-ExtraBoldItalic') format('svg');
   font-style: italic;
   font-weight: heavy;
 }

@@ -1,11 +1,11 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
-import scss from "./style.module.scss";
+import scss from './style.module.scss'
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export default function ButtonsSection({ children }: Props) {
-  return <div className={scss.outer}>{children}</div>;
+  return <div className={scss.outer}>{children}</div>
 }

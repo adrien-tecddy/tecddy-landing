@@ -1,5 +1,5 @@
 interface RawLinkingDataProps {
-  data: object;
+  data: object
 }
 
 export default function RawLinkingData({ data }: RawLinkingDataProps) {
@@ -8,5 +8,5 @@ export default function RawLinkingData({ data }: RawLinkingDataProps) {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
-  );
+  )
 }

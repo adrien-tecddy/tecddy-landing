@@ -1,4 +1,4 @@
-import DefaultPageLayout from "src/components/DefaultPageLayout";
+import DefaultPageLayout from 'src/components/DefaultPageLayout'
 
 const dangerouslySetInnerHTML = {
   __html: `
@@ -385,7 +385,7 @@ const dangerouslySetInnerHTML = {
     <p class="c17 c18"><span class="c22"></span></p>
 </div>
 `,
-};
+}
 
 const STYLE = {
   __html: `
@@ -4127,7 +4127,7 @@ const STYLE = {
             text-align: left
         }
     `,
-};
+}
 
 export default function PagesPrivacyPolicyIndex() {
   return (
@@ -4139,5 +4139,5 @@ export default function PagesPrivacyPolicyIndex() {
         dangerouslySetInnerHTML={dangerouslySetInnerHTML}
       />
     </DefaultPageLayout>
-  );
+  )
 }
